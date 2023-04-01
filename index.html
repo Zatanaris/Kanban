@@ -17,8 +17,6 @@
     <body>
         <div id="app">
             <nav class="sidebar">
-                <div class="bx bx-menu" id="close-bar"></div>
-
                 <div class="logo">
                     <img src="assets/img/Vector (1).png" alt="logo" />
                 </div>
@@ -26,18 +24,22 @@
                     <li class="nav--items">
                         <i class="bx bxs-dashboard"></i>
                         <a href="#" class="nav--links"> Boads </a>
+                        <span class="toolip">Boads</span>
                     </li>
                     <li class="nav--items">
                         <i class="bx bxs-group"></i>
                         <a href="#" class="nav--links"> Equipes </a>
+                        <span class="toolip">Equipes</span>
                     </li>
                     <li class="nav--items">
                         <i class="bx bxs-file-blank"></i>
                         <a href="#" class="nav--links"> Relatorios </a>
+                        <span class="toolip">Relatorios</span>
                     </li>
                     <li class="nav--items">
                         <i class="bx bxs-cog"></i>
                         <a href="#" class="nav--links"> Ajustes </a>
+                        <span class="toolip">Ajustes</span>
                     </li>
                 </ul>
                 <ul class="nav--list--modifil">
@@ -50,13 +52,21 @@
             <main>
                 <div class="kanban">
                     <header class="header">
-                        <div class="kanban--intro">
-                            <h1 class="kanban--title">
-                                Meu Kanban <i class="bx bxs-edit-alt"></i>
-                            </h1>
-                        </div>
+                        <h1 class="kanban--title">Meu Kanban <i class="bx bxs-edit-alt"></i></h1>
+
                         <img src="assets/img/Profile picture 1.png" alt="perfil" />
                     </header>
+
+                    <form class="form">
+                        <button class="primary">
+                            <i class="bx bx-filter"></i>
+                            Filtrar
+                        </button>
+                        <div class="form--control">
+                            <label for="filter"><i class="bx bx-search-alt-2"></i></label>
+                            <input type="search" name="filter" id="filter" />
+                        </div>
+                    </form>
                 </div>
             </main>
         </div>

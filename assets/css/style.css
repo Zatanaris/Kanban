@@ -72,32 +72,13 @@ h6 {
 .sidebar {
     height: 100vh;
     max-width: 5rem;
-    width: 100%;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     padding-block: 3.2rem;
-    transition: all 400ms ease;
-
-}
-
-.sidebar.active {
-    max-width: 14.5rem;
-}
-
-.sidebar.active .nav--links {
-    display: block;
-}
-
-#close-bar {
-    position: absolute;
-    top: 2rem;
-    right: -5rem;
-    font-size: 3.5rem;
-    color: #181818;
-    cursor: pointer;
+    transition: all 400ms ease-in;
 }
 
 .logo {
@@ -119,9 +100,24 @@ h6 {
 
 .nav--items {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 1.3rem;
     color: var(--links--colors);
+    position: relative;
+}
+
+.toolip {
+    position: absolute;
+    top: 0;
+    right: -13rem;
+    background-color: #7C3AED;
+    color: #ffffff;
+    padding: .3rem;
+    border-radius: .5rem;
+    width: 10rem;
+    display: none;
+    text-align: center;
+    z-index: 10;
 }
 
 .nav--links {
@@ -142,6 +138,10 @@ h6 {
     color: #FFFFFF;
 }
 
+.nav--items:is(:hover, :focus-within) .toolip {
+    display: block;
+}
+
 .nav--list--modifil {
     margin-block: auto 0;
 }
@@ -155,7 +155,7 @@ main {
 }
 
 .kanban {
-    --padding: 2.4rem;
+    --padding: 2rem;
     padding: 4.6rem 3.2rem;
 }
 
@@ -163,7 +163,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding-inline: var(--padding); */
+    padding-inline: var(--padding);
 }
 
 .header img {
@@ -175,6 +175,7 @@ main {
     font-weight: var(--fw--xl);
     color: #403937;
     display: flex;
+    gap: .8rem;
     align-items: center;
     white-space: nowrap;
 }
@@ -190,4 +191,20 @@ main {
     :root {
         font-size: 62.5%;
     }
+
+    .sidebar {
+        max-width: 14.5rem;
+        padding-inline: 3.2rem 2.7rem;
+    }
+
+    .nav--links {
+        display: block;
+    }
+
+    .nav--items:is(:hover, :focus-within) .toolip {
+        all: unset;
+        display: none;
+    }
+
+
 }
