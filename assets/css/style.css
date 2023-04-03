@@ -197,6 +197,7 @@ main {
 .form {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1.6rem;
 }
 
@@ -215,12 +216,16 @@ main {
     background-color: #7C3AED;
 }
 
+.primary:is(:hover, :focus) {
+    opacity: 0.8;
+}
+
 .primary i {
     font-size: 2.4rem;
 }
 
 .form--control {
-    flex: 1;
+    flex: 1 1 25rem;
     display: flex;
     align-items: center;
     padding: var(--padding);
@@ -229,6 +234,10 @@ main {
     border: .07rem solid #E3E3E3;
     box-shadow: 0px .4rem 1.6rem rgba(22, 22, 22, 0.1);
     border-radius: .8rem;
+}
+
+.form--control:is(:hover, :focus) {
+    border-color: #7C3AED;
 }
 
 .form--control label {
@@ -291,6 +300,10 @@ main {
     padding: .4rem .8rem;
     background: #E2D6FF;
     border-radius: .8rem;
+}
+
+.dragging {
+    opacity: 0.5;
 }
 
 @media(min-width: 600px) {
