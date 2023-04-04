@@ -1,4 +1,4 @@
-const coluns = document.querySelectorAll(".coll");
+const coluns = document.querySelectorAll(".cards");
 const filter = document.querySelector(".form .form--control input");
 const cards = document.querySelectorAll(".card");
 
